@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes,Route} from 'react-router-dom'
 import axios from 'axios'
 import Table from './pages/Table'
 import Search from './pages/Search'
+import { Forms } from './pages/Forms'
 export const fetchdata=async (id)=>{
   const res=await axios.get(`https://jsonplaceholder.typicode.com/posts/`);
   return res.data;
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/table' element={<Table />}/>
           <Route path='/search' element={<Search />}/>
+          <Route path='/form' element={<Forms />}/>
         </Routes>
       </Router>
     </QueryClientProvider>
