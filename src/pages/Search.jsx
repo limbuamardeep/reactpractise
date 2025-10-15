@@ -46,8 +46,9 @@ const Search=()=>{
 
         </table>
       
-
+            
         </div>
+
     )
 }
 export default Search;

@@ -8,7 +8,7 @@ export const Forms = () => {
         email: yup.string().email().required("Email required"),
         age:yup.number().positive().integer().min(18).required("age is required"),
         password:yup.string().min(4).max(20).required(),
-        repassword:yup.string().oneOf([yup.ref("password"),null]).required()
+        repassword:yup.string().oneOf([yup.ref("password"),null], "Password dont match").required()
     });
    const {register,handleSubmit,formState:{errors}}=useForm({
     resolver: yupResolver(schema)
